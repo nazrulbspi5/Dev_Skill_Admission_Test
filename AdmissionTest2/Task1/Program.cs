@@ -1,8 +1,21 @@
-﻿using Task1;
+﻿using System;
+using Task1;
+class Program
+{
 
-var text = Console.ReadLine();
+	// Main Method
+	static public void Main(String[] args)
+	{
 
-var frequencyCounter = new FrequencyCounter();
-var result = frequencyCounter.Count(text);
+		
 
-Console.WriteLine(result);
+		var text = Console.ReadLine();
+
+		var frequencyCounter = new FrequencyCounter();
+		var result = frequencyCounter.Count(text);
+
+		Console.WriteLine(result);
+	}
+}
+
+

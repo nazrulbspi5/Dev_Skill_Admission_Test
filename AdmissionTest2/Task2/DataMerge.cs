@@ -13,7 +13,10 @@ namespace Task2
 
         public List<(string customerName, List<string> productNames)> GetInfo()
         {
-            throw new NotImplementedException();
+            var ans = from customer in CustomerList
+                      join order in OrderList on customer.Id equals order.CustomerId
+                      select (customer.Name, (from oo in order.Products select oo.Name).ToList());
+            return ans.ToList();
         }
     }
 }

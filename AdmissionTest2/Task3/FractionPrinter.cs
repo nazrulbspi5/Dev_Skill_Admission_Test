@@ -10,7 +10,22 @@ namespace Task3
     {
         public string Print(int numerator, int denominator, int count)
         {
-            throw new NotImplementedException();
+            var data = (decimal)numerator / denominator;
+
+            string fff = @"{0:0.";
+
+            for (int i = 0; i < count; i++)
+            {
+                fff += '0';
+            }
+
+            fff += '}';
+
+            var ans = String.Format(fff, data);
+
+            return ans;
+
+
         }
     }
 }
